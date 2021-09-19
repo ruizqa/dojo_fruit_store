@@ -22,13 +22,33 @@
       <main role="main">
   
         <section class="jumbotron text-center">
-          <div class="container">
+          <div class="container-fluid">
             <h1 class="jumbotron-heading">Dojo Fruits</h1>
-            <p>Please figure out how to display the images here...</p>
+            <div class="row row-cols-4 d-flex flex-wrap align-items-end text-center my-4">
+              <div class="col thumb">
+                  <img class="img-responsive rounded-circle my-4" src="{{ url_for('static', filename='img/raspberry.png') }}">
+                  <h5 class="align-text-bottom">Raspberry</h5>
+              </div>
 
-            <p>
-              <a href="/" class="btn btn-primary my-2">Go back</a>
-            </p>
+              <div class="col thumb align-text-bottom">
+                <img class="img-responsive rounded-circle my-4" src="{{ url_for('static', filename='img/strawberry.png') }}">
+                <h5 class="align-text-bottom">Strawberry</h5>
+              </div>
+
+              <div class="col thumb align-text-bottom">
+                  <img class="img-responsive rounded-circle my-4" src="{{ url_for('static', filename='img/blackberry.png') }}">
+                  <h5 class="align-text-bottom">Blackberry</h5>
+              </div>
+                  
+              <div class="col thumb align-text-bottom">
+                  <img class="img-responsive rounded-circle" src="{{ url_for('static', filename='img/apple.png') }}">
+                  <h5 class="align-text-bottom">Apple</h5>
+              </div>
+       
+            </div>
+
+            <a href="/" class="btn btn-primary my-4">Go back</a>
+
           </div>
         </section>
   
