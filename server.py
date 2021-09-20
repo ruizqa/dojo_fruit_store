@@ -17,12 +17,12 @@ def checkout(fruits=fruits,total=total):
 
     for fruit in fruits:
         
-        if int(form_dict[fruit]) > 0:
-            total += int(form_dict[fruit])
+        if int(request.form[fruit]) > 0:
+            total += int(request.form[fruit])
             c_fruits.append(fruit)
             
     print(request.form)
-    print(f"Charging {form_dict['first_name']} {form_dict['last_name']} for {total} fruits")
+    print(f"Charging {request.form['first_name']} {request.form['last_name']} for {total} fruits")
     return render_template("checkout.html" ,fruits=c_fruits, total=total, date = dt_string)
 
 @app.route('/fruits')         
